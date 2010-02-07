@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarking", "Bookmarking\Bookmarking.csproj", "{BDD2C2BF-1C7D-439E-BD5E-07AF1C203C30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmarking.Specifications", "Bookmarking.Specifications\Bookmarking.Specifications.csproj", "{9953F92D-710D-4D76-8490-4537ADF2ABEB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDD2C2BF-1C7D-439E-BD5E-07AF1C203C30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD2C2BF-1C7D-439E-BD5E-07AF1C203C30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD2C2BF-1C7D-439E-BD5E-07AF1C203C30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD2C2BF-1C7D-439E-BD5E-07AF1C203C30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9953F92D-710D-4D76-8490-4537ADF2ABEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9953F92D-710D-4D76-8490-4537ADF2ABEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9953F92D-710D-4D76-8490-4537ADF2ABEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9953F92D-710D-4D76-8490-4537ADF2ABEB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

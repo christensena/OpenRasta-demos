@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BookmarkStore">
+  <DataContextMoniker Name="/BookmarkStoreDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9e5f255c-54ee-497c-a44a-bc42f67ddb19" absoluteBounds="0.75, 1, 2, 1.26050048828125">
+      <DataClassMoniker Name="/BookmarkStoreDataContext/Bookmark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="13c8d090-df2a-406c-bf55-876ec430491d" absoluteBounds="0.765, 1.46, 1.9700000000000002, 0.70050048828125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cc84892-42c0-432e-816c-9f6b30e58951" absoluteBounds="6.25, 1, 2, 1.0961531575520835">
+      <DataClassMoniker Name="/BookmarkStoreDataContext/UserBookmarkTag" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fd0bee37-6120-47ae-aed5-9289c0daf285" absoluteBounds="6.265, 1.46, 1.9700000000000002, 0.53615315755208326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81c437a6-bce7-4cff-b15e-125b6e976c20" absoluteBounds="0.75, 3.875, 2, 1.4248478190104166">
+      <DataClassMoniker Name="/BookmarkStoreDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e5c1bc88-e5e0-4981-acc4-288722aadeb4" absoluteBounds="0.765, 4.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="145a79a4-05e1-4146-a1d8-b59297c64635" absoluteBounds="3.5, 0.875, 2, 1.4248478190104164">
+      <DataClassMoniker Name="/BookmarkStoreDataContext/UserBookmark" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb65f00c-bd47-4798-815f-aa137454b6d4" absoluteBounds="3.515, 1.335, 1.9700000000000002, 0.86484781901041674" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 1.54807657877604); (6.25 : 1.54807657877604)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BookmarkStoreDataContext/UserBookmark/UserBookmark_UserBookmarkTag" />
+      <nodes>
+        <classShapeMoniker Id="145a79a4-05e1-4146-a1d8-b59297c64635" />
+        <classShapeMoniker Id="9cc84892-42c0-432e-816c-9f6b30e58951" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 1.63025024414063); (3.5 : 1.63025024414063)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BookmarkStoreDataContext/Bookmark/Bookmark_UserBookmark" />
+      <nodes>
+        <classShapeMoniker Id="9e5f255c-54ee-497c-a44a-bc42f67ddb19" />
+        <classShapeMoniker Id="145a79a4-05e1-4146-a1d8-b59297c64635" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.58742390950521); (4.5 : 4.58742390950521); (4.5 : 2.29984781901042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BookmarkStoreDataContext/User/User_UserBookmark" />
+      <nodes>
+        <classShapeMoniker Id="81c437a6-bce7-4cff-b15e-125b6e976c20" />
+        <classShapeMoniker Id="145a79a4-05e1-4146-a1d8-b59297c64635" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

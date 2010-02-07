@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="BookmarkStore" Class="BookmarkStoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\BookmarkStore.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BookmarkStoreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Bookmark" Member="Bookmarks">
+    <Type Name="Bookmark">
+      <Column Name="BookmarkId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(2048) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(2048) NOT NULL" CanBeNull="false" />
+      <Association Name="Bookmark_UserBookmark" Member="UserBookmarks" ThisKey="BookmarkId" OtherKey="BookmarkId" Type="UserBookmark" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBookmarkTag" Member="UserBookmarkTags">
+    <Type Name="UserBookmarkTag">
+      <Column Name="UserBookmarkId" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tag" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="UserBookmark_UserBookmarkTag" Member="UserBookmark" ThisKey="UserBookmarkId" OtherKey="UserBookmarkId" Type="UserBookmark" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[User]" Member="Users">
+    <Type Name="User">
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Username" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="User_UserBookmark" Member="UserBookmarks" ThisKey="UserId" OtherKey="UserId" Type="UserBookmark" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserBookmark" Member="UserBookmarks">
+    <Type Name="UserBookmark">
+      <Column Name="UserBookmarkId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BookmarkId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CustomTitle" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" />
+      <Association Name="UserBookmark_UserBookmarkTag" Member="UserBookmarkTags" ThisKey="UserBookmarkId" OtherKey="UserBookmarkId" Type="UserBookmarkTag" />
+      <Association Name="Bookmark_UserBookmark" Member="Bookmark" ThisKey="BookmarkId" OtherKey="BookmarkId" Type="Bookmark" IsForeignKey="true" />
+      <Association Name="User_UserBookmark" Member="User" ThisKey="UserId" OtherKey="UserId" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
