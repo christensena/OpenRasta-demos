@@ -46,7 +46,7 @@ namespace Bookmarking
                 ResourceSpace.Has.ResourcesOfType<UserBookmarkResource>()
                     .AtUri("/user/{username}/bookmark/{bookmarkId}")
                     .HandledBy<UserBookmarkHandler>()
-                    .RenderedByUserControl("~/Views/CreateUserBookmarkView.ascx");
+                    .RenderedByUserControl("~/Views/UserBookmarkView.ascx");
 
 
             }
